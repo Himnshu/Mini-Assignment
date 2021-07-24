@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "healthy_homemade_pizza.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

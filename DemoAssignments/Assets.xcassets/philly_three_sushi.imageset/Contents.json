@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "philly_three_sushi.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

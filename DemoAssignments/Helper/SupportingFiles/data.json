@@ -1,0 +1,154 @@
+{
+    "Pizza": [
+        {
+            "Image": "deluxe_pizza",
+            "Title": "Deluxe",
+            "Description": "Chicken, ham, pepperoni, tomato sauce, spicy chorizo and mozzareila",
+            "Size": "140 grams, 35 cm",
+            "Type": "Spicy",
+            "Price": 46
+        },
+        {
+            "Image": "hawaiian_pizza",
+            "Title": "Hawaiian",
+            "Description": "Chicken, Mozarella, Pinnapple, Domino's sauce",
+            "Size": "200 grams, 35 cm",
+            "Type": "Spicy",
+            "Price": 55
+        },
+        {
+            "Image": "pepperoni_pizza",
+            "Title": "Pepperoni",
+            "Description": "Mozarella, Pepperoni, Tomatoes, BBQ sauce",
+            "Size": "190 grams, 40 cm",
+            "Type": "Spicy,Vegan",
+            "Price": 55
+        },
+        {
+            "Image": "margherita_pizza",
+            "Title": "Margherita",
+            "Description": "Tomato sauce, spicy chorizo and mozzareila",
+            "Size": "140 grams, 35 cm",
+            "Type": "Vegan",
+            "Price": 49
+        },
+        {
+            "Image": "chicago_pizza",
+            "Title": "Chicago",
+            "Description": "Ham, Mozarella, spicy chorizo, Domino's sauce",
+            "Size": "130 grams, 35 cm",
+            "Type": "Vegan",
+            "Price": 56
+        },
+        {
+            "Image": "halal_pizza",
+            "Title": "Halal",
+            "Description": "Chicken, Toppings, Mozarella, Tomatoe sauce",
+            "Size": "160 grams, 40 cm",
+            "Type": "Spicy",
+            "Price": 60
+        },
+        {
+            "Image": "healthy_homemade_pizza",
+            "Title": "Healthy Homemade",
+            "Description": "Olive oil, wheat flour, crispy, healthy, tomato sauce, spicy chorizo and mozzareila",
+            "Size": "100 grams, 25 cm",
+            "Type": "Vegan",
+            "Price": 30
+        }
+    ],
+    
+    "Sushi": [
+        {
+            "Image": "egoist_sushi",
+            "Title": "The Egoist",
+            "Description": "Fila classic, maci spice-salmon, two sushi salmon, two guangana salami",
+            "Size": "450 grams, 18 pieces",
+            "Type": "Spicy",
+            "Price": 45
+        },
+        {
+            "Image": "california_sushi",
+            "Title": "California",
+            "Description": "California with salmon grill, fila with salmon, fila lollo-rossa, Futomaki perch cheese, maki spicy salmon",
+            "Size": "930 grams, 38 pieces",
+            "Type": "Spicy",
+            "Price": 60
+        },
+        {
+            "Image": "kamikadze_sushi",
+            "Title": "Kamikadze",
+            "Description": "Maci spice-salmon, two sushi salmon, two guangana salami",
+            "Size": "810 grams, 22 piece",
+            "Type": "Vegan",
+            "Price": 55
+        },
+        {
+            "Image": "philly_three_sushi",
+            "Title": "Philly three",
+            "Description": "Futomaki perch cheese, two sushi salmon",
+            "Size": "820 grams, 24 pieces",
+            "Type": "Spicy,Vegan",
+            "Price": 58
+        },
+        {
+            "Image": "sushimania_sushi",
+            "Title": "Sushimania",
+            "Description": "Maci spice-salmon, two sushi salmon, maki spicy salmon",
+            "Size": "910 grams, 35 pieces",
+            "Type": "Vegan",
+            "Price": 56
+        }
+    ],
+    
+    "Drinks": [
+        {
+            "Image": "brandy_drinks",
+            "Title": "Brandy",
+            "Description": "Typically made from grapes, but can be made with other fruits.",
+            "Size": "500-ml",
+            "Type": "Spicy",
+            "Price": 50
+        },
+        {
+            "Image": "vermouth_drinks",
+            "Title": "Vermouth",
+            "Description": "Vermouth is a fortified and aromatized wine.",
+            "Size": "750-ml",
+            "Type": "Spicy",
+            "Price": 30
+        },
+        {
+            "Image": "cognac_drinks",
+            "Title": "Cognac",
+            "Description": "Cognac is a specific type of brandy produced from distilled white wine.",
+            "Size": "375-ml",
+            "Type": "Spicy,Vegan",
+            "Price": 18
+        },
+        {
+            "Image": "beer_drinks",
+            "Title": "Beer",
+            "Description": "Beer is an alcoholic beverage produced by extracting raw materials with water, boiling (usually with hops), and fermenting",
+            "Size": "650-ml",
+            "Type": "Vegan",
+            "Price": 15
+        },
+        {
+            "Image": "port_wine_drinks",
+            "Title": "Port wine",
+            "Description": "Port is a sweet, red, fortified wine from Portugal.",
+            "Size": "Standard 75cl bottle",
+            "Type": "Vegan",
+            "Price": 20
+        },
+        {
+            "Image": "rum_drinks",
+            "Title": "Rum",
+            "Description": "Rum is a liquor made by fermenting then distilling sugarcane molasses or sugarcane juice.",
+            "Size": "1-L",
+            "Type": "Spicy",
+            "Price": 110
+        }
+    ]
+}
