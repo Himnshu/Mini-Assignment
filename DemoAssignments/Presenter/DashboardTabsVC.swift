@@ -110,8 +110,8 @@ class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
 
         gotPanned(percentage)
 
-        let name = NSNotification.Name(rawValue: "DashboardViewMoved")
-        NotificationCenter.default.post(name: name, object: nil, userInfo: ["percentage": percentage])
+        let name = NSNotification.Name(rawValue: kNotificationName)
+        NotificationCenter.default.post(name: name, object: nil, userInfo: [kPercentage: percentage])
     }
     
     // MARK: - SwipeMenuViewDelegate

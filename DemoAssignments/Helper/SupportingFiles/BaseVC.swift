@@ -23,17 +23,17 @@ class BaseVC: UIViewController {
     
     func setBackButton() {
         let backButton = UIBarButtonItem()
-        backButton.title = "Menu"
+        backButton.title = kBackTitle
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController!.navigationBar.tintColor = UIColor.black
     }
     
     func setFloatingButton(mFloatingBtn: UIButton, IsCart: Bool) {
         if (IsCart) {
-            mFloatingBtn.setImage(UIImage.init(named: "cart"), for: .normal)
+            mFloatingBtn.setImage(UIImage.init(named: kCartImage), for: .normal)
         }
         else {
-            mFloatingBtn.setImage(UIImage.init(named: "card"), for: .normal)
+            mFloatingBtn.setImage(UIImage.init(named: kCardImage), for: .normal)
         }
         
         mFloatingBtn.backgroundColor = .white

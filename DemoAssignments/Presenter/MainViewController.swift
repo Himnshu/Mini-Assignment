@@ -30,7 +30,7 @@ class MainViewController: BaseVC, UICollectionViewDataSource,
         createBottomView()
         configureCarousel()
         configureCarouselPageControl()
-        let name = NSNotification.Name(rawValue: "DashboardViewMoved")
+        let name = NSNotification.Name(rawValue: kNotificationName)
         NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
     }
     
@@ -96,7 +96,7 @@ class MainViewController: BaseVC, UICollectionViewDataSource,
 
     //MARK: Observer Method
     func receiveNotification(_ notification: Notification) {
-        guard let percentage = notification.userInfo?["percentage"] as? Int else { return }
+        guard let percentage = notification.userInfo?[kPercentage] as? Int else { return }
         subViewGotPanned(percentage)
     }
 
@@ -117,7 +117,7 @@ class MainViewController: BaseVC, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Carousel", for: indexPath) as! CarouselCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.carouselCell, for: indexPath) as! CarouselCell
         cell.viewsWithModel(model: modelList[indexPath.row])
         return cell
     }

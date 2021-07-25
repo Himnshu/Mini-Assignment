@@ -15,6 +15,7 @@ let kErrorCreatingEndPoint   = "Error in creating endpoint"
 
 // Currency Constant
 let kPriceCurrency           = "usd"
+let kAddedItem               = "added + 1"
 
 let kCart                    = "Cart"
 let kOrders                  = "Orders"
@@ -23,6 +24,19 @@ let kInformation             = "Information"
 let kPizza                   = "Pizza"
 let kSushi                   = "Sushi"
 let kDrinks                  = "Drinks"
+
+let kVegan                   = "Vegan"
+let kSpicy                   = "Spicy"
+
+let kBackTitle               = "Menu"
+
+let kNotificationName        = "DashboardViewMoved"
+
+let kPercentage              = "percentage"
+
+let kCartImage               = "cart"
+let kCardImage               = "card"
+
 
 let AppName = "Demo Assignment"
 
@@ -35,6 +49,7 @@ struct APIEndpoint {
 struct CellIdentifier {
     static let dashBoardTableViewCell       = "DashboardCell"
     static let cartTableViewCell            = "CartCell"
+    static let carouselCell                 = "Carousel"
 }
 
 struct ViewIdentifiers {

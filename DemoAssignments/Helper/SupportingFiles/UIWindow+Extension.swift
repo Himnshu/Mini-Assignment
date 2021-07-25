@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIWindow {
-    /// Fix for Changing the root view controller is not deallocating.
     func set(rootViewController newRootViewController: UIViewController, withTransition transition: CATransition? = nil) {
         
         let previousViewController = rootViewController

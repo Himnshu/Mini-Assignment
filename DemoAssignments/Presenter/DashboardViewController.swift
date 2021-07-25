@@ -107,7 +107,7 @@ class DashboardViewController: BaseVC {
     }
     
     @IBAction func floatingBtnAction(_ sender: Any) {
-        self.navigationController?.navigationBar.backItem?.backButtonTitle = "Menu"
+        self.navigationController?.navigationBar.backItem?.backButtonTitle = kBackTitle
         CartTabsVCRouter.shared.pushController(fromViewController: self, data: addedCartItems, previousViewController: self)
     }
     
@@ -120,7 +120,7 @@ class DashboardViewController: BaseVC {
         else {
             setupFilterView(mBtn: mSpicyBtn, IsSelected: true)
             let filtered = parentMockDatas.filter { item in
-                return (item.type?.contains("Spicy"))!
+                return (item.type?.contains(kSpicy))!
             }
             
             mockDatas = filtered
@@ -139,7 +139,7 @@ class DashboardViewController: BaseVC {
         else {
             setupFilterView(mBtn: mVeganBtn, IsSelected: true)
             let filtered = parentMockDatas.filter { item in
-                return (item.type?.contains("Vegan"))!
+                return (item.type?.contains(kVegan))!
             }
             
             mockDatas = filtered
@@ -184,7 +184,7 @@ extension DashboardViewController : DashboardCellDelegate {
         if (!self.IsItemAddedInCart) {
             self.IsItemAddedInCart = true
             cell.mPriceBtn.backgroundColor = UIColor.green
-            cell.mPriceBtn.setTitle("added + 1", for: .normal)
+            cell.mPriceBtn.setTitle(kAddedItem, for: .normal)
             addedCartItems.append(pizzaModel)
             self.hub?.increment()
             self.hub?.pop()
@@ -192,7 +192,7 @@ extension DashboardViewController : DashboardCellDelegate {
                 // change label here
                 self.IsItemAddedInCart = false
                 cell.mPriceBtn.backgroundColor = UIColor.black
-                cell.mPriceBtn.setTitle("\(pizzaModel.price!) usd", for: .normal)
+                cell.mPriceBtn.setTitle("\(pizzaModel.price!) \(kPriceCurrency)", for: .normal)
             }
         }
     }

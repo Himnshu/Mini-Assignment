@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 class DashBoardInteractor: NSObject {
-    //MARK: Object Mapper
+    
+    //MARK: Network Layer
     func getCommonJsonList(completion: @escaping (_ result: Result<[String: Any], SAError>) -> ()) {
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {

@@ -23,10 +23,6 @@ extension StoryboardIdentifiable where Self: UIViewController {
 }
 
 extension UIStoryboard  {
-    
-    /// The uniform place where we state all the storyboard we have in our application
-    
-    /// Convenience Initializers
     convenience init(storyboard: Storyboard, bundle: Bundle? = nil) {
         self.init(name: storyboard.rawValue, bundle: bundle)
     }
@@ -35,7 +31,6 @@ extension UIStoryboard  {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
     
-    /// View Controller Instantiation from Generics
     func instantiateViewController<T>() -> T where T: StoryboardIdentifiable {
         guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
