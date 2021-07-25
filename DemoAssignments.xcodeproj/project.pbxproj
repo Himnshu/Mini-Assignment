@@ -13,6 +13,8 @@
 		A36BAAB526AB590A00A1307A /* CartVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36BAAB426AB590A00A1307A /* CartVCRouter.swift */; };
 		A36BAABA26AB5D3800A1307A /* DashboardVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36BAAB926AB5D3800A1307A /* DashboardVCRouter.swift */; };
 		A377DCB026AD494300BD9844 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */; };
+		A377DCDB26AD72A000BD9844 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377DCDA26AD72A000BD9844 /* String+Extension.swift */; };
+		A377DCE026AD855700BD9844 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377DCDF26AD855700BD9844 /* Data+Extension.swift */; };
 		A39ABCB626A7453300C3C143 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCB526A7453300C3C143 /* Result.swift */; };
 		A39ABCBB26A745D100C3C143 /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCBA26A745D100C3C143 /* PizzaModel.swift */; };
 		A39ABCCF26A759CD00C3C143 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCCE26A759CD00C3C143 /* BadgeView.swift */; };
@@ -76,6 +78,8 @@
 		A36BAAB426AB590A00A1307A /* CartVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVCRouter.swift; sourceTree = "<group>"; };
 		A36BAAB926AB5D3800A1307A /* DashboardVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVCRouter.swift; sourceTree = "<group>"; };
 		A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		A377DCDA26AD72A000BD9844 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A377DCDF26AD855700BD9844 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		A39ABCB526A7453300C3C143 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A39ABCBA26A745D100C3C143 /* PizzaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
 		A39ABCCE26A759CD00C3C143 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				A3E0649126A83D1300DFEC63 /* AppHelper.swift */,
 				A3FB725526AAA79500AAC8F2 /* Mappable+Extension.swift */,
 				A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */,
+				A377DCDA26AD72A000BD9844 /* String+Extension.swift */,
+				A377DCDF26AD855700BD9844 /* Data+Extension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -570,6 +576,7 @@
 				A3E0646F26A8197700DFEC63 /* BaseVC.swift in Sources */,
 				A3A0B74626A6AB24007108E1 /* DashboardViewController.swift in Sources */,
 				A3E0643A26A7DBC400DFEC63 /* DashBoardTabsVCRouter.swift in Sources */,
+				A377DCDB26AD72A000BD9844 /* String+Extension.swift in Sources */,
 				A3A0B6F926A5D36D007108E1 /* AppDelegate.swift in Sources */,
 				A39ABCB626A7453300C3C143 /* Result.swift in Sources */,
 				A39ABCCF26A759CD00C3C143 /* BadgeView.swift in Sources */,
@@ -579,6 +586,7 @@
 				A3FB726126AAE9C400AAC8F2 /* CarouselElement.swift in Sources */,
 				A3E0647426A81A2D00DFEC63 /* LoadingIndicator.swift in Sources */,
 				A3E0648426A8339400DFEC63 /* DashBoardInteractor.swift in Sources */,
+				A377DCE026AD855700BD9844 /* Data+Extension.swift in Sources */,
 				A3E0649226A83D1300DFEC63 /* AppHelper.swift in Sources */,
 				A3E0646526A7E88200DFEC63 /* CartTabsVCRouter.swift in Sources */,
 				A377DCB026AD494300BD9844 /* UIApplication+Extension.swift in Sources */,

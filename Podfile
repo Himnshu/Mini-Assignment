@@ -7,6 +7,7 @@ target 'DemoAssignments' do
 
   # Pods for DemoAssignments
   pod 'MBProgressHUD'
+  pod 'Moya/RxSwift', '~> 13.0'
   pod 'ObjectMapper', '~> 3.5'
   pod 'SwipeMenuViewController'
 

@@ -32,16 +32,17 @@ class DashboardViewController: BaseVC {
         setFloatingButton(mFloatingBtn: mFloatingBtn, IsCart: true)
         setupFilterView(mBtn: mSpicyBtn, IsSelected: false)
         setupFilterView(mBtn: mVeganBtn, IsSelected: false)
-        getPizzaList()
+        getPizzaList(indicator: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         hub?.setCount(self.addedCartItems.count)
     }
     
-    //MARK: Network Call Service
-    func getPizzaList() {
-        dashboardInteractorServices.getPizzaJsonList() { (data) in
+    //MARK: Network Call Service using Moya
+    func getPizzaList(indicator: Bool) {
+        dashboardInteractorServices.getPizzaJsonList(indicator: indicator) { (data) in
+            Indicator.sharedInstance.hideIndicator()
             switch (data) {
                 case .success(let responses):
                     self.mFilterView.isHidden = false

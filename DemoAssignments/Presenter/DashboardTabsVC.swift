@@ -120,7 +120,7 @@ class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
         let previousController = children[fromIndex] as? DashboardViewController
         let controller = children[toIndex] as? DashboardViewController
         if (toIndex == 0) {
-            controller?.getPizzaList()
+            controller?.getPizzaList(indicator: false)
         }
         else if (toIndex == 1) {
             controller?.getSushiList()

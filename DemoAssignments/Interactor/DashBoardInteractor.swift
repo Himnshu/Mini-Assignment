@@ -7,71 +7,127 @@
 
 import Foundation
 import UIKit
+import Moya
+import Alamofire
+import RxSwift
 
 class DashBoardInteractor: NSObject {
     
-    //MARK: Network Layer
-    func getCommonJsonList(completion: @escaping (_ result: Result<[String: Any], SAError>) -> ()) {
-        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-            do {
-                let text = try String(contentsOfFile: path, encoding: .utf8)
-                if let dict = try JSONSerialization.jsonObject(with: text.data(using: .utf8)!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any] {
-                    completion(.success(dict))
-                }
-              } catch {
-                completion(.fail(SAError.init(error)))
-            }
-        }
-    }
+    let disposeBag = DisposeBag.init()
+    
+    //MARK: Moya Network Layer
+    fileprivate let simpleStubProvider = MoyaProvider<NetworkAPI>(stubClosure: MoyaProvider.delayedStub(1.0), plugins: [NetworkLoggerPlugin(verbose: true)])
+    
+    
     
     //MARK: GET PIZZAS
-    func getPizzaJsonList(completion: @escaping (_ result: Result<[PizzaModel], SAError>) -> ()) {
-        self.getCommonJsonList() { (data) in
-            switch (data) {
-                case .success(let responses):
-                    if let data = BaseModel(JSON: responses) {
+    func getPizzaJsonList(indicator: Bool, completion: @escaping (_ result: Result<[PizzaModel], SAError>) -> ()) {
+        if (indicator) {
+            Indicator.sharedInstance.showIndicator()
+        }
+        simpleStubProvider.rx.request(.getCommonJsonList).asObservable().filterSuccessfulStatusCodes().subscribeOn(MainScheduler.instance).subscribe(onNext: { response in
+            do {
+                if let dict = try JSONSerialization.jsonObject(with: response.data.stringEncoded.data(using: .utf8)!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any] {
+                    if let data = BaseModel(JSON: dict) {
                         print("===============\n\(data.Pizza)")
                         completion(.success(data.Pizza)!)
                     }
-                    break
-                case .fail(let error):
-                    completion(.fail(error))
-                    break
+                }
             }
-        }
+            catch {
+                completion(.fail(SAError.init(error)))
+            }
+        }, onError: { error in
+            print(error)
+        }).disposed(by: disposeBag)
     }
+    
+    
     
     //MARK: GET SUSHIS
     func getSushiJsonList(completion: @escaping (_ result: Result<[PizzaModel], SAError>) -> ()) {
-        self.getCommonJsonList() { (data) in
-            switch (data) {
-                case .success(let responses):
-                    if let data = BaseModel(JSON: responses) {
+        simpleStubProvider.rx.request(.getCommonJsonList).asObservable().filterSuccessfulStatusCodes().subscribeOn(MainScheduler.instance).subscribe(onNext: { response in
+            do {
+                if let dict = try JSONSerialization.jsonObject(with: response.data.stringEncoded.data(using: .utf8)!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any] {
+                    if let data = BaseModel(JSON: dict) {
                         print("===============\n\(data.Sushi)")
                         completion(.success(data.Sushi)!)
                     }
-                    break
-                case .fail(let error):
-                    completion(.fail(error))
-                    break
+                }
             }
-        }
+            catch {
+                completion(.fail(SAError.init(error)))
+            }
+        }, onError: { error in
+            print(error)
+        }).disposed(by: disposeBag)
     }
+    
+    
     
     //MARK: GET DRINKS
     func getDrinksJsonList(completion: @escaping (_ result: Result<[PizzaModel], SAError>) -> ()) {
-        self.getCommonJsonList() { (data) in
-            switch (data) {
-                case .success(let responses):
-                    if let data = BaseModel(JSON: responses) {
+        simpleStubProvider.rx.request(.getCommonJsonList).asObservable().filterSuccessfulStatusCodes().subscribeOn(MainScheduler.instance).subscribe(onNext: { response in
+            do {
+                if let dict = try JSONSerialization.jsonObject(with: response.data.stringEncoded.data(using: .utf8)!, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any] {
+                    if let data = BaseModel(JSON: dict) {
                         print("===============\n\(data.Drinks)")
                         completion(.success(data.Drinks)!)
                     }
-                    break
-                case .fail(let error):
-                    completion(.fail(error))
-                    break
+                }
             }
+            catch {
+                completion(.fail(SAError.init(error)))
+            }
+        }, onError: { error in
+            print(error)
+        }).disposed(by: disposeBag)
+    }
+}
+
+
+// MARK: Network API Extensions
+enum NetworkAPI {
+    case getCommonJsonList
+}
+
+extension NetworkAPI: TargetType {
+    var baseURL: URL {
+        let url = "https://Yoururlhere/api/v1"
+        return URL.init(string: url)!
+    }
+    
+    var path: String {
+        switch self {
+        case .getCommonJsonList:
+            return ""
+        }
+    }
+    
+    var method: Alamofire.HTTPMethod {
+        return .get
+    }
+    
+    var task: Task {
+        return .requestPlain
+    }
+    
+    var headers: [String : String]? {
+        nil
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .getCommonJsonList:
+            if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+                do {
+                    let text = try String(contentsOfFile: path, encoding: .utf8)
+                    return text.dataEncoded
+                  } catch {
+                }
+            }
+            
+            return "".dataEncoded
         }
     }
 }
