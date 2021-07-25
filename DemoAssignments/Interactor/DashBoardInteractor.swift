@@ -16,7 +16,7 @@ class DashBoardInteractor: NSObject {
     let disposeBag = DisposeBag.init()
     
     //MARK: Moya Network Layer
-    fileprivate let simpleStubProvider = MoyaProvider<NetworkAPI>(stubClosure: MoyaProvider.delayedStub(1.0), plugins: [NetworkLoggerPlugin(verbose: true)])
+    fileprivate let simpleStubProvider = MoyaProvider<NetworkAPI>(stubClosure: MoyaProvider.delayedStub(0.5), plugins: [NetworkLoggerPlugin(verbose: true)])
     
     
     
