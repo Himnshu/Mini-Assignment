@@ -81,7 +81,7 @@ class MainViewController: BaseVC, UICollectionViewDataSource,
         guard let propAnimator = animator else {
             animator = UIViewPropertyAnimator(duration: 3, curve: .linear, animations: {
                 self.blackView.alpha = 1
-              self.blackView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8).concatenating(CGAffineTransform(translationX: 0, y: -20))
+//                self.blackView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8).concatenating(CGAffineTransform(translationX: 0, y: -20))
                 self.carouselView.alpha = 1
                 self.carouselPageControl.alpha = 1
                 self.carouselView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8).concatenating(CGAffineTransform(translationX: 0, y: -20))

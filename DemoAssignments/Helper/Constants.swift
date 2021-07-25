@@ -24,7 +24,6 @@ let kPizza                   = "Pizza"
 let kSushi                   = "Sushi"
 let kDrinks                  = "Drinks"
 
-
 let AppName = "Demo Assignment"
 
 

@@ -12,6 +12,7 @@
 		A356FA4B70522904C28FEC11 /* Pods_DemoAssignments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5183FA6853BB4DF099D80D6B /* Pods_DemoAssignments.framework */; };
 		A36BAAB526AB590A00A1307A /* CartVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36BAAB426AB590A00A1307A /* CartVCRouter.swift */; };
 		A36BAABA26AB5D3800A1307A /* DashboardVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36BAAB926AB5D3800A1307A /* DashboardVCRouter.swift */; };
+		A377DCB026AD494300BD9844 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */; };
 		A39ABCB626A7453300C3C143 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCB526A7453300C3C143 /* Result.swift */; };
 		A39ABCBB26A745D100C3C143 /* PizzaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCBA26A745D100C3C143 /* PizzaModel.swift */; };
 		A39ABCCF26A759CD00C3C143 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39ABCCE26A759CD00C3C143 /* BadgeView.swift */; };
@@ -74,6 +75,7 @@
 		937C8E3F98754AB6C5DCA7C0 /* Pods-DemoAssignments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAssignments.release.xcconfig"; path = "Target Support Files/Pods-DemoAssignments/Pods-DemoAssignments.release.xcconfig"; sourceTree = "<group>"; };
 		A36BAAB426AB590A00A1307A /* CartVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVCRouter.swift; sourceTree = "<group>"; };
 		A36BAAB926AB5D3800A1307A /* DashboardVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVCRouter.swift; sourceTree = "<group>"; };
+		A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		A39ABCB526A7453300C3C143 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A39ABCBA26A745D100C3C143 /* PizzaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaModel.swift; sourceTree = "<group>"; };
 		A39ABCCE26A759CD00C3C143 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				A3E0647326A81A2D00DFEC63 /* LoadingIndicator.swift */,
 				A3E0649126A83D1300DFEC63 /* AppHelper.swift */,
 				A3FB725526AAA79500AAC8F2 /* Mappable+Extension.swift */,
+				A377DCAF26AD494300BD9844 /* UIApplication+Extension.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				A3E0648426A8339400DFEC63 /* DashBoardInteractor.swift in Sources */,
 				A3E0649226A83D1300DFEC63 /* AppHelper.swift in Sources */,
 				A3E0646526A7E88200DFEC63 /* CartTabsVCRouter.swift in Sources */,
+				A377DCB026AD494300BD9844 /* UIApplication+Extension.swift in Sources */,
 				A3E0646026A7E6F800DFEC63 /* CartCell.swift in Sources */,
 				A3A0B6FB26A5D36D007108E1 /* SceneDelegate.swift in Sources */,
 				A3E0644C26A7DDD100DFEC63 /* UIWindow+Extension.swift in Sources */,

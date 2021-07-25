@@ -107,7 +107,6 @@
             "Title": "Brandy",
             "Description": "Typically made from grapes, but can be made with other fruits.",
             "Size": "500-ml",
-            "Type": "Spicy",
             "Price": 50
         },
         {
@@ -115,7 +114,6 @@
             "Title": "Vermouth",
             "Description": "Vermouth is a fortified and aromatized wine.",
             "Size": "750-ml",
-            "Type": "Spicy",
             "Price": 30
         },
         {
@@ -123,7 +121,6 @@
             "Title": "Cognac",
             "Description": "Cognac is a specific type of brandy produced from distilled white wine.",
             "Size": "375-ml",
-            "Type": "Spicy,Vegan",
             "Price": 18
         },
         {
@@ -131,7 +128,6 @@
             "Title": "Beer",
             "Description": "Beer is an alcoholic beverage produced by extracting raw materials with water, boiling (usually with hops), and fermenting",
             "Size": "650-ml",
-            "Type": "Vegan",
             "Price": 15
         },
         {
@@ -139,7 +135,6 @@
             "Title": "Port wine",
             "Description": "Port is a sweet, red, fortified wine from Portugal.",
             "Size": "Standard 75cl bottle",
-            "Type": "Vegan",
             "Price": 20
         },
         {
@@ -147,7 +142,6 @@
             "Title": "Rum",
             "Description": "Rum is a liquor made by fermenting then distilling sugarcane molasses or sugarcane juice.",
             "Size": "1-L",
-            "Type": "Spicy",
             "Price": 110
         }
     ]

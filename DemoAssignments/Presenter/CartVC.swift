@@ -20,7 +20,6 @@ class CartVC: BaseVC {
     //MARK: LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.navigationBar.isTranslucent = true;
         //setFloatingButton(mFloatingBtn: mFloatingBtn, IsCart: false)
         // Do any additional setup after loading the view.
     }
@@ -71,9 +70,9 @@ extension CartVC : CartCellDelegate {
     func cancelBtnAction(_ index: Int) {
         cartItems.remove(at: index)
         self.delegate?.checkCountBadge(index: cartItems.count)
+        mTableView.reloadData()
         if (cartItems.count == 0) {
             self.navigationController!.popViewController(animated: true)
         }
-        mTableView.reloadData()
     }
 }

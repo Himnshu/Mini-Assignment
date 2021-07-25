@@ -10,12 +10,11 @@ import UIKit
 import SwipeMenuViewController
 
 class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
-    @IBOutlet weak var swipeView: UIView!
     @IBOutlet weak var navBarView: UIView!
     
-    let closeThresholdHeight: CGFloat = 300 //300
+    let closeThresholdHeight: CGFloat = 200 //300
     let openThreshold: CGFloat = UIScreen.main.bounds.height - 400 // 400
-    let closeThreshold = UIScreen.main.bounds.height - 300 // 300 // same value as closeThresholdHeight
+    let closeThreshold = UIScreen.main.bounds.height - 200 // 300 // same value as closeThresholdHeight
     var panGestureRecognizer: UIPanGestureRecognizer?
     var animator: UIViewPropertyAnimator?
     
@@ -31,7 +30,8 @@ class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
     //MARK: LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        gotPanned(0)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         datas.forEach { data in
             let vc = UIStoryboard(name: Storyboard.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: ViewIdentifiers.dashBoardVC) as! DashboardViewController
             vc.title = data
@@ -39,10 +39,7 @@ class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
         }
         
         super.viewDidLoad()
-        
-        swipeView.swipeRectShape(swipeView: swipeView, size: 20)
-        navBarView.swipeRectShape(swipeView: navBarView, size: 20)
-        
+        gotPanned(0)
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(respondToPanGesture))
         view.addGestureRecognizer(gestureRecognizer)
         gestureRecognizer.delegate = self
@@ -53,7 +50,7 @@ class DashboardTabsVC: SwipeMenuViewController, UIGestureRecognizerDelegate {
     func gotPanned(_ percentage: Int) {
         if animator == nil {
             animator = UIViewPropertyAnimator(duration: 1, curve: .linear, animations: {
-                let scaleTransform = CGAffineTransform(scaleX: 1, y: 5).concatenating(CGAffineTransform(translationX: 0, y: 440))
+                let scaleTransform = CGAffineTransform(scaleX: 1, y: 5).concatenating(CGAffineTransform(translationX: 0, y: 240))
                 self.navBarView.transform = scaleTransform
                 self.navBarView.alpha = 0
             })
