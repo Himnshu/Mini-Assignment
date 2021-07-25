@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 import Moya
 import Alamofire
 import RxSwift
@@ -38,7 +37,7 @@ class DashBoardInteractor: NSObject {
                 completion(.fail(SAError.init(error)))
             }
         }, onError: { error in
-            print(error)
+            completion(.fail(SAError.init(error)))
         }).disposed(by: disposeBag)
     }
     
@@ -59,7 +58,7 @@ class DashBoardInteractor: NSObject {
                 completion(.fail(SAError.init(error)))
             }
         }, onError: { error in
-            print(error)
+            completion(.fail(SAError.init(error)))
         }).disposed(by: disposeBag)
     }
     
@@ -80,7 +79,7 @@ class DashBoardInteractor: NSObject {
                 completion(.fail(SAError.init(error)))
             }
         }, onError: { error in
-            print(error)
+            completion(.fail(SAError.init(error)))
         }).disposed(by: disposeBag)
     }
 }
